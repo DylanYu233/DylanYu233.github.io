@@ -4,11 +4,32 @@
   
     
     <entry>
+      <title>回溯算法</title>
+      <link href="/2023/09/07/%E5%9B%9E%E6%BA%AF%E7%AE%97%E6%B3%95/"/>
+      <url>/2023/09/07/%E5%9B%9E%E6%BA%AF%E7%AE%97%E6%B3%95/</url>
+      
+        <content type="html"><![CDATA[<link rel="stylesheet" class="aplayer-secondary-style-marker" href="\assets\css\APlayer.min.css"><script src="\assets\js\APlayer.min.js" class="aplayer-secondary-script-marker"></script><h2 id="回溯算法基本介绍"><a href="#回溯算法基本介绍" class="headerlink" title="回溯算法基本介绍"></a>回溯算法基本介绍</h2><h2 id="组合问题"><a href="#组合问题" class="headerlink" title="组合问题"></a>组合问题</h2><p>leetcode题目链接：<a href="https://leetcode.cn/problems/combinations/description/">77. 组合 - 力扣（LeetCode）</a></p><p>我的代码：</p><figure class="highlight c++"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">class</span> <span class="title class_">Solution</span> &#123;</span><br><span class="line"><span class="keyword">public</span>:</span><br><span class="line">    vector&lt;vector&lt;<span class="type">int</span>&gt;&gt; <span class="built_in">combine</span>(<span class="type">int</span> n, <span class="type">int</span> k) &#123;</span><br><span class="line">        std::vector&lt;<span class="type">int</span>&gt; path;</span><br><span class="line">        std::vector&lt;std::vector&lt;<span class="type">int</span>&gt;&gt; result;</span><br><span class="line"></span><br><span class="line">        std::function&lt;<span class="type">void</span>(<span class="type">int</span>)&gt; dfs = [&amp;](<span class="type">int</span> i) &#123;</span><br><span class="line">            <span class="keyword">if</span> (k == path.<span class="built_in">size</span>()) &#123;</span><br><span class="line">                result.<span class="built_in">emplace_back</span>(path);</span><br><span class="line">                <span class="keyword">return</span>;</span><br><span class="line">            &#125;</span><br><span class="line"></span><br><span class="line">            <span class="keyword">for</span> (; i &lt;= n; i++) &#123;</span><br><span class="line">                path.<span class="built_in">emplace_back</span>(i);</span><br><span class="line">                <span class="built_in">dfs</span>(i + <span class="number">1</span>);</span><br><span class="line">                path.<span class="built_in">pop_back</span>();</span><br><span class="line">            &#125;</span><br><span class="line">        &#125;;</span><br><span class="line"></span><br><span class="line">        <span class="built_in">dfs</span>(<span class="number">1</span>);</span><br><span class="line">        <span class="keyword">return</span> result;</span><br><span class="line">    &#125;</span><br><span class="line">&#125;;</span><br></pre></td></tr></table></figure>]]></content>
+      
+      
+      
+        <tags>
+            
+            <tag> C++ </tag>
+            
+            <tag> 算法 </tag>
+            
+        </tags>
+      
+    </entry>
+    
+    
+    
+    <entry>
       <title>Unity学习笔记</title>
       <link href="/2023/09/03/Unity%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B0/"/>
       <url>/2023/09/03/Unity%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B0/</url>
       
-        <content type="html"><![CDATA[<link rel="stylesheet" class="aplayer-secondary-style-marker" href="\assets\css\APlayer.min.css"><script src="\assets\js\APlayer.min.js" class="aplayer-secondary-script-marker"></script><h2 id="关于Unity"><a href="#关于Unity" class="headerlink" title="关于Unity"></a>关于Unity</h2><p>新开的坑…</p>]]></content>
+        <content type="html"><![CDATA[<link rel="stylesheet" class="aplayer-secondary-style-marker" href="\assets\css\APlayer.min.css"><script src="\assets\js\APlayer.min.js" class="aplayer-secondary-script-marker"></script><h2 id="【P1】关于Unity"><a href="#【P1】关于Unity" class="headerlink" title="【P1】关于Unity"></a>【P1】关于Unity</h2><p>Unity是一套具有完善体系与编辑器的跨平台游戏开发工具，也可称之为游戏引擎。游戏引擎是指一些编写好的可重复利用的代码与开发游戏所用的各功能编辑器。Unity目前已超过50%的游戏引擎市场占有率。</p>]]></content>
       
       
       
