@@ -29,7 +29,7 @@
       <link href="/2023/09/03/Unity%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B0/"/>
       <url>/2023/09/03/Unity%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B0/</url>
       
-        <content type="html"><![CDATA[<link rel="stylesheet" class="aplayer-secondary-style-marker" href="\assets\css\APlayer.min.css"><script src="\assets\js\APlayer.min.js" class="aplayer-secondary-script-marker"></script><h2 id="【P1】关于Unity"><a href="#【P1】关于Unity" class="headerlink" title="【P1】关于Unity"></a>【P1】关于Unity</h2><p>Unity是一套具有完善体系与编辑器的跨平台游戏开发工具，也可称之为游戏引擎。游戏引擎是指一些编写好的可重复利用的代码与开发游戏所用的各功能编辑器。Unity目前已超过50%的游戏引擎市场占有率。</p>]]></content>
+        <content type="html"><![CDATA[<link rel="stylesheet" class="aplayer-secondary-style-marker" href="\assets\css\APlayer.min.css"><script src="\assets\js\APlayer.min.js" class="aplayer-secondary-script-marker"></script><h2 id="【P1】Unity的下载安装"><a href="#【P1】Unity的下载安装" class="headerlink" title="【P1】Unity的下载安装"></a>【P1】Unity的下载安装</h2><p><strong>介绍：</strong>Unity是一套具有完善体系与编辑器的跨平台游戏开发工具，也可称之为游戏引擎。游戏引擎是指一些编写好的可重复利用的代码与开发游戏所用的各功能编辑器。Unity目前已超过50%的游戏引擎市场占有率</p><p>Unity中文官网：<a href="https://unity.cn/">Unity实时内容开发平台 -实时3D引擎、2D、VR&amp;AR可视化数据 | Unity中国官网</a></p><p><strong>下载安装Unity：</strong></p><p>为以后方便管理编译器版本以及模块和扩展，先下载Unity Hub，下载前要先注册然后登入</p><p><img src="/%E5%8D%9A%E6%96%87%E5%9B%BE/Unity/%E5%AE%89%E8%A3%85/1.jpg"></p><p>安装完后打开Unity Hub，然后登入，登入是跳转到网站上登入的</p><p>登入后会出现如下图的页面，先不安装，选择Skip Installation，然后选择同意获得个人版本许可（Agree and get personal edition license）</p><p><img src="/%E5%8D%9A%E6%96%87%E5%9B%BE/Unity/%E5%AE%89%E8%A3%85/2.jpg"></p><p><img src="/%E5%8D%9A%E6%96%87%E5%9B%BE/Unity/%E5%AE%89%E8%A3%85/3.jpg"></p><p>选择右上角的齿轮可设置语言</p><p><img src="/%E5%8D%9A%E6%96%87%E5%9B%BE/Unity/%E5%AE%89%E8%A3%85/4.jpg"></p>]]></content>
       
       
       
