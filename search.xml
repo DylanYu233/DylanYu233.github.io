@@ -4,6 +4,25 @@
   
     
     <entry>
+      <title>第一个游戏</title>
+      <link href="/2023/10/21/%E7%AC%AC%E4%B8%80%E4%B8%AA%E6%B8%B8%E6%88%8F/"/>
+      <url>/2023/10/21/%E7%AC%AC%E4%B8%80%E4%B8%AA%E6%B8%B8%E6%88%8F/</url>
+      
+        <content type="html"><![CDATA[<link rel="stylesheet" class="aplayer-secondary-style-marker" href="\assets\css\APlayer.min.css"><script src="\assets\js\APlayer.min.js" class="aplayer-secondary-script-marker"></script><h1 id="【P1】基础设置"><a href="#【P1】基础设置" class="headerlink" title="【P1】基础设置"></a>【P1】基础设置</h1><h2 id="1-素材导入和整理"><a href="#1-素材导入和整理" class="headerlink" title="1.素材导入和整理"></a>1.素材导入和整理</h2><p>第一步就是获得需要的游戏素材资源，然后将素材文件直接拖到项目(Project)面板中的Asset文件夹下即可</p><p><img src="/%E5%8D%9A%E6%96%87%E5%9B%BE/%E7%AC%AC%E4%B8%80%E7%AB%A0/%E7%AC%AC%E4%B8%80%E4%B8%AA%E6%B8%B8%E6%88%8F/1.jpg"></p><p>找到需要用上的人物素材（这里使用char_blue_1），通过预览我们可以看到该素材是一个图集并且图像有点不清晰的，所以我们需要在检查器(Inspector)中对其进行调整使其锐化，然后再对图集进行一定比例的切割</p><ul><li><p><input disabled="" type="checkbox"> 调整</p><p>1.在<strong>Sprite Mode</strong>中选择<strong>Multiple</strong>，因为我们选择的图集中里面包含多个人物素材，需要进行切割</p><p>2.在<strong>Pixels Per Unit</strong>中填16，因为使用的素材的像素比例为16。<strong>Pixels Per Unit</strong> 意思是，每个Unity单位显示多少个像素（也就是<strong>Scene</strong>面板里每一个正方形格子中所包含的像素个数）。默认100，也就意味着每1个Unity单位显示100像素。一般的美术素材中都会标注当前的图像是多少像素x多少像素的，我们可以根据这个来设置图像的大小</p><p>3.<strong>Filter Mode</strong>中选择<strong>Point</strong>，这样可以保证我们的像素不会产生模糊，像素的锯齿感更清晰</p><p>4.<strong>Compression</strong>中选择<strong>None</strong>，这样可以让图像的质量最高，不会被压缩</p><p>5.设置完后要选择<strong>Apply</strong> 使上面的设置生效</p><p><img src="/%E5%8D%9A%E6%96%87%E5%9B%BE/%E7%AC%AC%E4%B8%80%E7%AB%A0/%E7%AC%AC%E4%B8%80%E4%B8%AA%E6%B8%B8%E6%88%8F/2.jpg"></p></li><li><p><input disabled="" type="checkbox"> 切割</p><p>在检查器中点击<strong>Sprite Editor</strong>进入切割页面</p><p>1.<strong>Type</strong>选择<strong>Grid By Cell Count</strong>这样可以根据每一行每一列的图片个数来进行切割</p><p>2.通过数个数我们可以按照每行8 个，每列11个人物素材进行等比例切割，所以设置为8和11</p><p>3.<strong>Pivot</strong>即轴心，代表着模型的真实位置，<code>transform.position </code>获取的就是pivot ，是模型旋转、缩放的参考点，每个物体的轴心一般默认为<strong>Center</strong>。我们希望轴心在图片的底部，这样方便我们做后续的判断是否接触到地面等逻辑处理，所以设置为<strong>Bottom</strong></p><p>4.切割完后记得点击<strong>Slice</strong>，然后点击右上角的<strong>Apply</strong>使得切割生效</p><p><img src="/%E5%8D%9A%E6%96%87%E5%9B%BE/%E7%AC%AC%E4%B8%80%E7%AB%A0/%E7%AC%AC%E4%B8%80%E4%B8%AA%E6%B8%B8%E6%88%8F/3.png" alt="退出切割界面后，在Inspect窗口不要忘记点击Apply"></p></li></ul><h2 id="2-场景绘制和叠层设置"><a href="#2-场景绘制和叠层设置" class="headerlink" title="2.场景绘制和叠层设置"></a>2.场景绘制和叠层设置</h2><p>找到需要切割的场景素材Forest-1，然后在检查器中按照对人物素材char_blue_1的设置一样进行调整。然后点击<strong>Sprite Editor</strong>进入切割页面</p><ol><li><p>点击 Slice</p></li><li><p><strong>Type</strong>选择<strong>Grid By Cell Size</strong>，这样就是根据单元占像素量分割，这里选择以每16x16的格子为一个单位来进行切割</p></li><li><p><strong>Pivot</strong>即轴心，这里设置轴心在图片的中心位置，这样方便我们绘制地图</p></li><li><p>最后记得点击<strong>Slice</strong></p></li><li><p>点击右上角的<strong>Apply</strong>使得切割生效</p><p><img src="/%E5%8D%9A%E6%96%87%E5%9B%BE/%E7%AC%AC%E4%B8%80%E7%AB%A0/%E7%AC%AC%E4%B8%80%E4%B8%AA%E6%B8%B8%E6%88%8F/4.jpg" alt="退出切割界面后，在Inspect窗口不要忘记点击Apply"></p></li></ol><p>接下来使用Unity内置的2d场景绘制工具，选择Windows - 2d - Tile Palette，打开后会出现瓦片调色盘的窗口，可以将其拖拽到Editor上固定的位置，比如<strong>Hierarchy</strong>(层级)旁边，在一开始可以看到是没有任何可用的调色盘的，所以需要新建一个。选择<strong>create new polot</strong>新建一个调色盘，并取名为Forest1，这时会弹出一个窗口询问要创建在哪里，在弹出的窗口中我们可以看到该窗口跟Unity中的<strong>Project</strong>窗口显示的文件是一致的，我们使用的所有素材资源都要放在<strong>Assets</strong>。在目前的窗口中新建一个Tilemap（瓦片地图）文件夹，为方便规划管理，在Tilemap文件夹下创建一个palette（调色盘）文件夹，然后选择该文件夹。这样便在palette里创建出第一个调色盘Forest1，然后将<strong>Project</strong>里的场景素材Forest-1拖拽添加到<strong>taplot</strong>中，这时会弹出窗口询问用户要将这些瓦片存在哪里使用，双击Tilemap文件夹，在该文件夹目录下新建一个Tiles（瓦片）文件夹，然后创建新文件夹Forest1进行分类，然后点击选择，这样素材Forest-1的所有瓦片便会进行加载，加载完后调色盘便会出现素材的瓦片地图。</p><p>除此之外我们还需要添加一个可用目标，让它可以绘制瓦片地图。在<strong>Hierarchy</strong>界面右键空白处，选择2D Object - Tilemap - Rectangular，然后返回调色盘窗口，便能看到此时的调色盘窗口显示拥有一个活动目标（这里我将Grid中的Tilemap重命名为Platform）</p><p><img src="/%E5%8D%9A%E6%96%87%E5%9B%BE/%E7%AC%AC%E4%B8%80%E7%AB%A0/%E7%AC%AC%E4%B8%80%E4%B8%AA%E6%B8%B8%E6%88%8F/5.jpg"></p><h2 id="3-有规则和动态瓦片"><a href="#3-有规则和动态瓦片" class="headerlink" title="3.有规则和动态瓦片"></a>3.有规则和动态瓦片</h2>]]></content>
+      
+      
+      
+        <tags>
+            
+            <tag> Unity </tag>
+            
+        </tags>
+      
+    </entry>
+    
+    
+    
+    <entry>
       <title>第一次旅行</title>
       <link href="/2023/10/15/%E7%AC%AC%E4%B8%80%E6%AC%A1%E6%97%85%E8%A1%8C/"/>
       <url>/2023/10/15/%E7%AC%AC%E4%B8%80%E6%AC%A1%E6%97%85%E8%A1%8C/</url>
