@@ -141,27 +141,6 @@
     
     
     <entry>
-      <title>C++STL容器之vector</title>
-      <link href="/2023/08/15/C++STL%E5%AE%B9%E5%99%A8%E4%B9%8Bvector/"/>
-      <url>/2023/08/15/C++STL%E5%AE%B9%E5%99%A8%E4%B9%8Bvector/</url>
-      
-        <content type="html"><![CDATA[<link rel="stylesheet" class="aplayer-secondary-style-marker" href="\assets\css\APlayer.min.css"><script src="\assets\js\APlayer.min.js" class="aplayer-secondary-script-marker"></script><h2 id="一、介绍"><a href="#一、介绍" class="headerlink" title="一、介绍"></a>一、介绍</h2><p><strong>vector</strong>容器是C++ STL中的一个容器，它是一个动态数组，可以自动管理内存大小，也就是在运行时根据需要动态增长或缩小，并且支持随机访问，在使用前必须<code>include&lt;vector&gt;</code>，在此头文件内，vector实际上是定义于namespace std内的一个类模板：</p><figure class="highlight c++"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">namespace</span> std &#123;</span><br><span class="line">    <span class="keyword">template</span> &lt;<span class="keyword">typename</span> T, <span class="keyword">typename</span> Allocator = allocator&lt;T&gt;&gt;</span><br><span class="line">    <span class="keyword">class</span> vector;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure><p>也就是说vector可存储元素可以是任意类型T，而第二个template参数用来定义内存模型，<strong>默认为C++标准库的allocator</strong>。存储的区域不同于array，array的内存空间是固定大小的，并且对象和数组存储在相同的内存区域（栈）中，而vector对象存储在自由存储区（堆）。</p>]]></content>
-      
-      
-      
-        <tags>
-            
-            <tag> C++ </tag>
-            
-            <tag> STL </tag>
-            
-        </tags>
-      
-    </entry>
-    
-    
-    
-    <entry>
       <title>The Cherno CppSeries学习笔记</title>
       <link href="/2023/08/15/The%20Cherno%20CppSeries%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B0/"/>
       <url>/2023/08/15/The%20Cherno%20CppSeries%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B0/</url>
@@ -173,6 +152,27 @@
         <tags>
             
             <tag> C++ </tag>
+            
+        </tags>
+      
+    </entry>
+    
+    
+    
+    <entry>
+      <title>C++STL容器之vector</title>
+      <link href="/2023/08/15/C++STL%E5%AE%B9%E5%99%A8%E4%B9%8Bvector/"/>
+      <url>/2023/08/15/C++STL%E5%AE%B9%E5%99%A8%E4%B9%8Bvector/</url>
+      
+        <content type="html"><![CDATA[<link rel="stylesheet" class="aplayer-secondary-style-marker" href="\assets\css\APlayer.min.css"><script src="\assets\js\APlayer.min.js" class="aplayer-secondary-script-marker"></script><h2 id="一、介绍"><a href="#一、介绍" class="headerlink" title="一、介绍"></a>一、介绍</h2><p><strong>vector</strong>容器是C++ STL中的一个容器，它是一个动态数组，可以自动管理内存大小，也就是在运行时根据需要动态增长或缩小，并且支持通过下标快速访问，在使用前必须<code>include&lt;vector&gt;</code>，在此头文件内，vector实际上是定义于namespace std内的一个类模板：</p><figure class="highlight c++"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">namespace</span> std &#123;</span><br><span class="line">    <span class="keyword">template</span> &lt;<span class="keyword">typename</span> T, <span class="keyword">typename</span> Allocator = allocator&lt;T&gt;&gt;</span><br><span class="line">    <span class="keyword">class</span> vector;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure><p>也就是说vector可存储元素可以是任意类型T，而第二个template参数用来定义内存模型，<strong>默认为C++标准库的allocator</strong>。存储的区域不同于array，array的内存空间是固定大小的，并且对象和数组存储在相同的内存区域（栈）中，而vector对象存储在自由存储区（堆）。</p>]]></content>
+      
+      
+      
+        <tags>
+            
+            <tag> C++ </tag>
+            
+            <tag> STL </tag>
             
         </tags>
       
